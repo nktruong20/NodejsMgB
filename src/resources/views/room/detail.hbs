@@ -1,0 +1,52 @@
+
+{{!-- <div class="card mb-3 detail_container " style="width: 40rem; margin: auto">
+  <h3 class="card-title detail_title" style="text-align:center;">Details of room number {{room.roomNumber}}</h3>
+  <img src="{{room.image}}" class="card-img-top " alt="...">
+  <div class="card-body">
+    <div style="display: flex; justify-content: space-around; margin: 1rem auto">
+      <h2 style="color: #131859;">{{room.cost}} $</h2>
+      <a href="/reservation/{{room.roomNumber}}" class="btn btn-primary">Book now!!!</a>
+    </div>
+    <p class="card-text" style="text-align:justify;">{{room.detail}}</p>
+    <p class="card-text"><small class="text-muted">Type bed: {{room.type}}</small></p>
+    
+  </div>
+</div> --}}
+
+<div class="detail_room">
+    <div class="row">
+        <div class="col-lg-7">
+             <img src="{{room.image}}" class="card-img-top " alt="..." style="height: 450px;border-radius: 10px;">
+        </div>
+        <div class="col-lg-5 details">
+            <h3 style="margin-bottom: 15px;">Details of room number :  {{room.roomNumber}}</h3>
+            <div class="type_bed">
+                 <p>Type Bed : {{room.type}}</p>
+            </div>
+            <div class="room_detail">
+                <p>Details : {{room.detail}}</p>
+            </div>
+             <div class="bookbtn" style="text-align: center;">
+                <a href="/reservation/{{room.roomNumber}}" class="btn" style="width: 100%;background-color:#33c757 ;padding: 10px;font-size: 16px;font-weight: 600;color: white;">Book Now</a>
+             </div>
+        </div>
+    </div>
+</div>
+
+<style>
+  .detail_room{
+    margin-top: 50px;
+  }
+  .details{
+    padding-left: 50px;
+    padding-top: 30px;
+  }
+  .type_bed p{
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 520;
+  }
+  .room_detail p{
+    font-size: 17px;
+  }
+</style>

@@ -1,0 +1,23 @@
+    <div class="container mt-4">
+        <div class="row">
+            {{#each room}}
+            <div class="col-sm-6 col-lg-4 card__list card__shadow">
+                <div class="card">
+                    <a href="/room/{{this.roomNumber}}">
+                        <img src="{{this.image}}" class="card-img-top" alt="...">
+                    </a>
+                    <div class="card-body">
+                        <h6 class="card-title">Room {{this.roomNumber}}</h6>
+                        <div style="display: flex; justify-content: space-around;">
+                            <p class="card-text" style="color:grey;"><i>Type bed: {{this.type}}</i></p>
+                            <h3 style="color: #131859;">{{this.cost}} $</h3>
+                        </div>
+                        <div style="display: flex; justify-content: center;">
+                            <a href="/reservation/{{this.roomNumber}}" class="btn btn-primary">Book now!!!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>

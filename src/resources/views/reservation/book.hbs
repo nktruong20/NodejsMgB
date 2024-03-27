@@ -1,0 +1,83 @@
+{{!-- <div class="mt-4">
+    <h1>Create reservation</h1>
+    <form method="POST" action="/reservation/store">
+        <div class="mb-3">
+            <label for="idReservation" class="form-label">ID reservation</label>
+            <input type="input" class="form-control" id="idReservation" name="idReservation" value="{{room.roomNumber}}">
+        </div>
+        <div class="mb-3">
+            <label for="phoneNumber" class="form-label">Phone Number</label>
+            <input type="input" class="form-control" id="phoneNumber" name="phoneNumber" value="">
+        </div>
+        <div class="mb-3">
+            <label for="roomNumber" class="form-label">Room Number</label>
+            <input type="input" class="form-control" id="roomNumber" name="roomNumber" value="{{room.roomNumber}}">
+        </div>
+        <div class="mb-3">
+          <label for="roomNumber" class="form-label">Total price <i>(included VAT)</i></label>
+          <input type="input" class="form-control" id="cost" value="{{room.cost}}$" style="color: #131859;font-weight: bold;">
+        </div>
+        <button type="submit" class="btn btn-primary">BOOK</button>
+    </form>
+</div>
+<div class="image_detail">
+  <img class="img_detail" src="{{room.image}}" alt="">
+</div> --}}
+
+
+<div class="reservation_detail" style="margin-top: 30px;">
+   <div class="row">
+     <div class="col-lg-6">
+        <div class="img_detail">
+             <img class="img_detail" src="{{room.image}}" alt="">
+        </div>
+      
+    </div>
+    <div class="col-lg-6 detail_res">
+        <form action="/reservation/store" method="post">
+             <div class="mb-3">
+                <label for="idReservation" class="form-label">ID reservation</label>
+                <input type="input" class="form-control" id="idReservation" name="idReservation" value="{{room.roomNumber}}">
+            </div>
+             <div class="mb-3">
+            <label for="phoneNumber" class="form-label">Phone Number</label>
+            <input type="input" class="form-control" id="phoneNumber" name="phoneNumber" value="">
+        </div>
+        <div class="mb-3">
+            <label for="roomNumber" class="form-label">Room Number</label>
+            <input type="input" class="form-control" id="roomNumber" name="roomNumber" value="{{room.roomNumber}}">
+        </div>
+        <div class="mb-3">
+          <label for="roomNumber" class="form-label">Total price <i>(included VAT)</i></label>
+          <input type="input" class="form-control" id="cost" value="{{room.cost}}$" style="color: #131859;font-weight: bold;">
+        </div>
+        <button type="submit" class="btn">BOOK</button>
+        </form>
+  </div>
+   </div>
+   
+</div>
+
+
+<style>
+  .detail_res{
+    padding-left: 50px;
+  }
+    img{
+      width: 100%;
+      border-radius: 10px;
+    }
+    .mb-3{
+      width: 50%;
+    }
+   .btn{
+    margin-top: 20px;
+      background-color:#33c757;
+      width: 50%;
+      padding: 10px ;
+      font-weight: 500;
+
+    }
+</style>
+
+
